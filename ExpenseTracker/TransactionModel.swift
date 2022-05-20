@@ -9,7 +9,7 @@ import Foundation
 
 struct Transaction: Identifiable {
     let id: Int
-    let data: String
+    let date: String
     let institution: String
     let account: String
     let merchant: String
@@ -21,6 +21,10 @@ struct Transaction: Identifiable {
     let isTransfer: Bool
     let isExpense:  Bool
     let isEdited: Bool
+    
+    var dateParsed: Date {
+        date.dateParsed()
+    }
 }
 
 
